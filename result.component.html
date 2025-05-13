@@ -1,0 +1,6 @@
+<div class="result-container">
+  <h2>Quiz Completed!</h2>
+  <p>Your Score: {{ score }} / {{ total }}</p>
+  <p>Percentage: {{ getPercentage() }}%</p>
+  <button (click)="restart.emit()">Restart Quiz</button>
+</div>
