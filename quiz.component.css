@@ -1,0 +1,19 @@
+.question-container {
+  text-align: center;
+  margin: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.selected {
+  background-color: lightgreen;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

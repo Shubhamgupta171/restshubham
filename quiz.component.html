@@ -1,0 +1,16 @@
+<div *ngIf="!quizCompleted">
+  <div class="question-container">
+    <h2>Question {{ currentQuestionIndex + 1 }}</h2>
+    <p>{{ questions[currentQuestionIndex].question }}</p>
+    <div *ngFor="let option of questions[currentQuestionIndex].options">
+      <button (click)="selectAnswer(option)" [class.selected]="selectedAnswer === option">
+        {{ option }}
+      </button>
+    </div>
+    <button (click)="nextQuestion()" [disabled]="!selectedAnswer">Next</button>
+  </div>
+</div>
+
+<div *ngIf="quizCompleted">
+  <app-result [score]="score" [total]="questions.length" (restart)="restartQuiz()"></app-result>
+</div>
